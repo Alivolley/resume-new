@@ -11,11 +11,13 @@ function App() {
    return (
       <AppWrapper>
          <Row>
-            <Col md={4}>
+            <Col sm={5} md={4} lg={3}>
                <SideBar />
             </Col>
 
-            <Col md={8}>{router}</Col>
+            <Col sm={7} md={8} lg={9}>
+               {router}
+            </Col>
          </Row>
       </AppWrapper>
    );

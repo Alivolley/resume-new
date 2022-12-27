@@ -10,7 +10,7 @@ import SideBarLinks from "../SideBarLinks/SideBarLinks";
 export default function Sidebar() {
    return (
       <SideBarWrapper>
-         <Image src={first} alt="" />
+         <Image src={first} alt="Ali Azghandi" />
          <Title>Ali Azghandi</Title>
 
          <SocialMediaIcons>
