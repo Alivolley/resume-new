@@ -49,8 +49,8 @@ const SideBarLinksWrapper = styled.div`
       color: ${colors.hover};
       font-size: 3rem;
       border-bottom: 0.2rem solid ${colors.hover};
-      padding-bottom: 1rem;
-      border-bottom-right-radius: 2rem;
+      padding-bottom: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
 
       p {
          color: ${colors.mainColor};
@@ -65,6 +65,8 @@ const LinkItem = styled(NavLink)`
    font-size: 2.2rem;
    color: ${colors.mainColor};
    transition: all 0.15s;
+   width: fit-content;
+   padding: 0 1.5rem 0 0.5rem;
 
    &:hover {
       color: ${colors.hover};
