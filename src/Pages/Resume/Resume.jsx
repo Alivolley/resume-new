@@ -15,7 +15,7 @@ export default function Resume() {
             <ResumeItem skill={"Html"} percent={"90"} prog={"90"} />
             <ResumeItem skill={"Css"} percent={"90"} prog={"90"} />
             <ResumeItem skill={"Javascript"} percent={"85"} prog={"85"} />
-            <ResumeItem skill={"Es6 , Es7 , Es8..."} percent={"80"} prog={"80"} />
+            <ResumeItem skill={"Es6 , Es7 , Es8..."} percent={"85"} prog={"85"} />
             <ResumeItem skill={"React"} percent={"90"} prog={"90"} />
             <ResumeItem skill={"Git & Github"} percent={"95"} prog={"95"} />
          </Row>
@@ -62,6 +62,7 @@ const Title = styled.h2`
    border-bottom: 0.1rem solid ${colors.hover};
    margin: 3rem auto;
    text-shadow: 0px 4px 5px ${colors.hover};
+   border-radius: 0.5rem;
 `;
 
 const List = styled.ul``;
