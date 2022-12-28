@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BsCollection, BsFillFileEarmarkPostFill } from "react-icons/bs";
-import { FaCodepen } from "react-icons/fa";
 import { MdContactPhone } from "react-icons/md";
 import colors from "../../Styles/Varibles";
 
@@ -26,10 +25,10 @@ export default function SideBarLinks() {
             <BsCollection />
             <p>Portfolio</p>
          </LinkItem>
-         <LinkItem to="/services">
+         {/* <LinkItem to="/services">
             <FaCodepen />
             <p>Services</p>
-         </LinkItem>
+         </LinkItem> */}
          <LinkItem to="/contact">
             <MdContactPhone />
             <p>Contact</p>

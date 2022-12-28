@@ -31,6 +31,7 @@ const Item = styled.a.attrs({ target: "_blank" })`
 `;
 
 const Image = styled.img`
+   width: 100%;
    max-width: 20rem;
    height: 10rem;
    display: block;
@@ -43,9 +44,9 @@ const Text = styled.p`
    font-size: 1.4rem;
    color: black;
    padding: 1.5rem 0;
-   height: 14rem;
+   height: 12rem;
    display: -webkit-box;
-   -webkit-line-clamp: 6;
+   -webkit-line-clamp: 5;
    -webkit-box-orient: vertical;
    overflow: hidden;
 `;
