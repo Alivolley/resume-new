@@ -3,24 +3,39 @@ import { Col } from "react-bootstrap";
 import styled from "styled-components";
 import colors from "../../Styles/Varibles";
 
-export default function ContactItme({ firstIcon, social, title }) {
+export default function ContactItme({ firstIcon, social, title, goTo }) {
    return (
       <Col sm={6}>
-         <ContactItmeWrapper href="/">
-            <Icon color={social}>{firstIcon}</Icon>
-            <Label>{social}</Label>
-            <Response>{title}</Response>
-         </ContactItmeWrapper>
+         {social.includes("PhoneCall") ? (
+            <Div>
+               <Icon color={social}>{firstIcon}</Icon>
+               <Label>{social}</Label>
+               <Response>{title}</Response>
+            </Div>
+         ) : (
+            <ContactItmeWrapper href={goTo}>
+               <Icon color={social}>{firstIcon}</Icon>
+               <Label>{social}</Label>
+               <Response>{title}</Response>
+            </ContactItmeWrapper>
+         )}
       </Col>
    );
 }
 
-const ContactItmeWrapper = styled.a`
+const ContactItmeWrapper = styled.a.attrs({ target: "_blank" })`
    display: flex;
    align-items: center;
    gap: 1rem;
    margin-bottom: 3rem;
    cursor: pointer;
+`;
+
+const Div = styled.div`
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   margin-bottom: 3rem;
 `;
 
 const Icon = styled.div`
