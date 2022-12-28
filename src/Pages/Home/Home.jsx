@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import second from "./../../assets/Images/second.jpg";
 import Typewriter from "typewriter-effect";
+import colors from "../../Styles/Varibles";
 
 export default function Home() {
    return (
@@ -35,4 +36,9 @@ const HomeWrapper = styled.section`
    padding-left: 10rem;
    padding-top: 8rem;
    margin-left: -1.5rem;
+
+   p,
+   span {
+      text-shadow: 0px 0px 10px ${colors.mainColor};
+   }
 `;
