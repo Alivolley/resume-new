@@ -5,7 +5,7 @@ import colors from "../../Styles/Varibles";
 
 export default function ContactItme({ firstIcon, social, title, goTo }) {
    return (
-      <Col sm={6}>
+      <Col lg={6}>
          {social.includes("PhoneCall") ? (
             <Div>
                <Icon color={social}>{firstIcon}</Icon>
@@ -39,8 +39,12 @@ const Div = styled.div`
 `;
 
 const Icon = styled.div`
-   font-size: 2.5rem;
+   font-size: 2.2rem;
    cursor: pointer;
+
+   @media (max-width: 992px) {
+      font-size: 1.7rem;
+   }
 
    color: ${({ color }) =>
       color.includes("Telegram")
@@ -63,10 +67,18 @@ const Label = styled.label`
    font-size: 2rem;
    cursor: pointer;
    color: black;
+
+   @media (max-width: 992px) {
+      font-size: 1.5rem;
+   }
 `;
 
 const Response = styled.label`
    font-size: 2rem;
    cursor: pointer;
    color: black;
+
+   @media (max-width: 992px) {
+      font-size: 1.4rem;
+   }
 `;

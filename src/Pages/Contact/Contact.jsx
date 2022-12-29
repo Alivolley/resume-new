@@ -29,6 +29,10 @@ export default function Contact() {
 const ContactWrapper = styled.section`
    margin-top: 10rem;
    padding: 3rem;
+
+   @media (max-width: 992px) {
+      margin-top: 2rem;
+   }
 `;
 
 const Title = styled.h2`
