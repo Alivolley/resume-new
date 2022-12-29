@@ -3,14 +3,17 @@ import styled from "styled-components";
 import second from "./../../assets/Images/second.jpg";
 import Typewriter from "typewriter-effect";
 import colors from "../../Styles/Varibles";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+   const { t } = useTranslation();
+
    return (
       <HomeWrapper>
-         <p>Ali Azghandi</p>
+         <p>{t("name")}</p>
          <Typewriter
             onInit={(typewriter) => {
-               typewriter.typeString("Frontend-developer").pauseFor(2000).deleteAll().start();
+               typewriter.typeString(t("position")).pauseFor(2000).deleteAll().start();
             }}
             options={{
                autoStart: true,
