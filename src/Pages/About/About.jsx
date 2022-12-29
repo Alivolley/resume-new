@@ -44,6 +44,15 @@ const AboutWrapper = styled.section`
 const Describtion = styled.h3`
    margin-top: 7rem;
    line-height: 3.2rem;
+
+   @media (max-width: 1100px) {
+      padding: 0;
+      margin-top: 2rem;
+   }
+
+   @media (min-width: 576px) and (max-width: 992px) {
+      font-size: 1.4rem;
+   }
 `;
 
 const Title = styled.h2`
@@ -60,4 +69,10 @@ const Text = styled.p`
 const Infos = styled.div`
    margin-top: 5rem;
    padding: 0 5rem;
+
+   @media (max-width: 1100px) {
+      padding: 0;
+      margin-top: 2rem;
+      margin-bottom: 7rem;
+   }
 `;
