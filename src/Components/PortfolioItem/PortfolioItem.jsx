@@ -19,7 +19,7 @@ export default function PortfolioItem({ source, explain, goTo }) {
 }
 
 const PortfolioItemWrapper = styled(Col)`
-   margin-top: 1.5rem;
+   margin-top: 1.5rem !important;
 `;
 
 const Item = styled.a.attrs({ target: "_blank" })`

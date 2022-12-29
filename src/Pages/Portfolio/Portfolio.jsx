@@ -69,6 +69,7 @@ export default function Portfolio() {
 const PortfolioWrapper = styled.section`
    margin-top: 2rem;
    padding: 0 3rem;
+   margin-bottom: 5rem;
 `;
 
 const AlertCustom = styled(Alert)`
@@ -79,6 +80,17 @@ const AlertCustom = styled(Alert)`
    div {
       display: flex;
       gap: 5rem;
+   }
+
+   @media (max-width: 576px) {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+
+      div {
+         display: flex;
+         flex-direction: column;
+         gap: 1rem;
+      }
    }
 `;
 
