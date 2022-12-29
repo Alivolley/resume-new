@@ -55,7 +55,6 @@ const ColApp = styled(Col)`
       z-index: 2;
       transition: all 0.2s;
       right: ${({ show }) => (show ? 0 : "100%")};
-      --bs-gutter-x: 0;
    }
 `;
 

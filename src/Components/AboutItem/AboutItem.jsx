@@ -16,7 +16,7 @@ export default function AboutItem({ quest, res, icon }) {
 const ColBs = styled(Col)`
    display: flex;
    align-items: center;
-   margin-top: 2.5rem;
+   margin-top: 2.5rem !important;
 
    @media (max-width: 1100px) {
       font-size: 1.5rem;

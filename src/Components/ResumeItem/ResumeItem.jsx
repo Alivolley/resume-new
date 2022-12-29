@@ -15,8 +15,13 @@ export default function ResumeItem({ skill, percent, prog }) {
 }
 
 const ResumeItemWrapper = styled(Col)`
-   margin-top: 2.5rem;
-   padding: 0 5rem;
+   @media (min-width: 280px) {
+      margin-top: 1rem !important;
+   }
+
+   @media (min-width: 1000px) {
+      padding: 0 5rem !important;
+   }
 `;
 
 const Titles = styled.div`

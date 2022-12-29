@@ -69,7 +69,6 @@ const List = styled.ul``;
 
 const Item = styled(Col)`
    margin-bottom: 2.5rem;
-   padding: 0 5rem;
 `;
 
 const Icon = styled(SiCheckmarx)`
