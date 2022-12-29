@@ -23,7 +23,7 @@ export default function Home() {
 
 const HomeWrapper = styled.section`
    height: 100%;
-   background-image: url(${second});
+   background-image: linear-gradient(90deg, rgba(4, 11, 20, 0.5) 0%, rgba(4, 11, 20, 0.5) 100%), url(${second});
    background-repeat: no-repeat;
    background-position: center center;
    background-size: cover;
@@ -36,6 +36,14 @@ const HomeWrapper = styled.section`
    padding-left: 10rem;
    padding-top: 8rem;
    margin-left: -1.5rem;
+
+   @media (max-width: 576px) {
+      align-items: center;
+      padding-left: 0;
+      padding-top: 0;
+      font-size: 3rem;
+      height: 100vh;
+   }
 
    p,
    span {

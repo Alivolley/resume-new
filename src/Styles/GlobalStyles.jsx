@@ -29,5 +29,22 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
    }
 
+   @media (max-width: 576px) {
+      .row{
+         margin-top: 0; 
+         margin-right: 0; 
+         margin-left: 0;
+      }
+
+      .row>* {
+      padding-right: 0;
+      padding-left: 0;
+      margin-top: 0;
+   }
+      
+   }
+
+
+
 
 `;
