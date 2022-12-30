@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BsCollection, BsFillFileEarmarkPostFill } from "react-icons/bs";
@@ -9,19 +9,21 @@ import { useTranslation } from "react-i18next";
 
 export default function SideBarLinks() {
    const { t, i18n } = useTranslation();
-   const navigation = useNavigate();
+   const location = useLocation();
+   const navigate = useNavigate();
 
    const changeLanguge = () => {
       if (i18n.language === "en") {
-         navigation(0);
          localStorage.setItem("lang", "fa");
          i18n.changeLanguage("fa");
+         location.pathname === "/" && navigate("/about");
       } else {
-         navigation(0);
          localStorage.setItem("lang", "en");
          i18n.changeLanguage("en");
+         location.pathname === "/" && navigate("/about");
       }
    };
+   console.log(location);
 
    return (
       <SideBarLinksWrapper direct={i18n.language}>

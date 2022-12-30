@@ -30,6 +30,10 @@ const fa = {
    Remote: "دورکاری",
    Kermanshah: "کرمانشاه",
    Year: "۱ سال",
+
+   resume: "رزومه",
+   mainSkills: "مهارت های اصلی",
+   otherSkills: "مهارت های دیگر",
 };
 
 export default fa;

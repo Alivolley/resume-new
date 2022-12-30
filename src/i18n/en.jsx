@@ -27,6 +27,10 @@ const en = {
    Remote: "Remote",
    Kermanshah: "Kermanshah",
    Year: "1 Year",
+
+   resume: "Resume",
+   mainSkills: "Main skills",
+   otherSkills: "Other skills",
 };
 
 export default en;

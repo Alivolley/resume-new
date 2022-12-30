@@ -5,22 +5,25 @@ import ResumeItem from "../../Components/ResumeItem/ResumeItem";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import colors from "../../Styles/Varibles";
 import { SiCheckmarx } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 export default function Resume() {
+   const { t } = useTranslation();
+
    return (
       <ResumeWrapper>
-         <SectionTitle>Resume</SectionTitle>
-         <Title>Main skils</Title>
+         <SectionTitle>{t("resume")}</SectionTitle>
+         <Title>{t("mainSkills")}</Title>
          <Row>
-            <ResumeItem skill={"Html"} percent={"90"} prog={"90"} />
-            <ResumeItem skill={"Css"} percent={"90"} prog={"90"} />
-            <ResumeItem skill={"Javascript"} percent={"85"} prog={"85"} />
-            <ResumeItem skill={"Es6 , Es7 , Es8..."} percent={"85"} prog={"85"} />
+            <ResumeItem skill={"Html"} percent={"95"} prog={"95"} />
+            <ResumeItem skill={"Css"} percent={"95"} prog={"95"} />
+            <ResumeItem skill={"Javascript"} percent={"90"} prog={"90"} />
+            <ResumeItem skill={"Es6 , Es7 , Es8..."} percent={"90"} prog={"90"} />
             <ResumeItem skill={"React"} percent={"90"} prog={"90"} />
             <ResumeItem skill={"Git & Github"} percent={"95"} prog={"95"} />
          </Row>
 
-         <Title>Other skils</Title>
+         <Title>{t("otherSkills")}</Title>
 
          <List>
             <Row>

@@ -1,9 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import colors from "../../Styles/Varibles";
 
 export default function SectionTitle({ children }) {
-   return <SectionTitleWrapper>{children}</SectionTitleWrapper>;
+   const { i18n } = useTranslation();
+
+   return <SectionTitleWrapper direct={i18n.language}>{children}</SectionTitleWrapper>;
 }
 
 const SectionTitleWrapper = styled.h1`
@@ -15,4 +18,5 @@ const SectionTitleWrapper = styled.h1`
    padding-right: 1.5rem;
    padding-left: 0.5rem;
    border-bottom-right-radius: 1rem;
+   margin-left: ${({ direct }) => (direct === "fa" ? "auto" : "null")};
 `;
