@@ -9,7 +9,7 @@ import SideBarLinks from "../SideBarLinks/SideBarLinks";
 import { useTranslation } from "react-i18next";
 
 export default function Sidebar() {
-   const { t, i18n } = useTranslation();
+   const { t } = useTranslation();
 
    return (
       <SideBarWrapper>

@@ -1,11 +1,14 @@
 import React from "react";
 import { Col } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import colors from "../../Styles/Varibles";
 
 export default function AboutItem({ quest, res, icon }) {
+   const { i18n } = useTranslation();
+
    return (
-      <ColBs sm={6}>
+      <ColBs sm={6} direct={i18n.language}>
          <Icon>{icon}</Icon>
          <Quest>{quest}</Quest>
          <Response>{res}</Response>
@@ -16,6 +19,8 @@ export default function AboutItem({ quest, res, icon }) {
 const ColBs = styled(Col)`
    display: flex;
    align-items: center;
+   gap: ${({ direct }) => direct === "fa" && "1rem"};
+
    margin-top: 2.5rem !important;
 
    @media (max-width: 1100px) {

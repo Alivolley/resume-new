@@ -9,27 +9,26 @@ import { GiRank3, GiModernCity } from "react-icons/gi";
 import { FaRegHandshake } from "react-icons/fa";
 import { GrWorkshop } from "react-icons/gr";
 import colors from "../../Styles/Varibles";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+   const { t, i18n } = useTranslation();
+
    return (
-      <AboutWrapper>
-         <SectionTitle>About</SectionTitle>
-         <Describtion>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sunt maiores quisquam tempora quo recusandae consequuntur animi incidunt, neque quis
-            molestiae magni nisi a quos consectetur magnam excepturi porro architecto eos eaque corporis ea aut! Quod impedit accusamus quae assumenda est reprehenderit,
-            aut repellendus earum officiis, nostrum minima libero blanditiis.
-         </Describtion>
-         <Title>Frontend-Developer</Title>
-         <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, nesciunt.</Text>
+      <AboutWrapper direct={i18n.language}>
+         <SectionTitle>{t("aboutHeader")}</SectionTitle>
+         <Describtion>{t("aboutDescribtion")}</Describtion>
+         <Title>{t("position")}</Title>
+         <Text>{t("aboutUnderPosition")}</Text>
 
          <Infos>
             <Row>
-               <AboutItem quest={`Age : `} res={`23`} icon={<IoCalendarNumberOutline />} />
-               <AboutItem quest={`Marriage status : `} res={`Single`} icon={<TbUsers />} />
-               <AboutItem quest={`Military service status : `} res={`Done`} icon={<GiRank3 />} />
-               <AboutItem quest={`Type of partnership : `} res={`Remote`} icon={<FaRegHandshake />} />
-               <AboutItem quest={`City : `} res={`Kermanshah`} icon={<GiModernCity />} />
-               <AboutItem quest={`Exprience : `} res={`1 Year`} icon={<GrWorkshop />} />
+               <AboutItem quest={t("Age") + " : "} res={t(23)} icon={<IoCalendarNumberOutline />} />
+               <AboutItem quest={t("MarriageStatus") + " : "} res={t("Single")} icon={<TbUsers />} />
+               <AboutItem quest={t("MilitaryServiceStatus") + " : "} res={t("Done")} icon={<GiRank3 />} />
+               <AboutItem quest={t("TypeOfPartnership") + " : "} res={t("Remote")} icon={<FaRegHandshake />} />
+               <AboutItem quest={t("City") + " : "} res={t("Kermanshah")} icon={<GiModernCity />} />
+               <AboutItem quest={t("Exprience") + " : "} res={t("Year")} icon={<GrWorkshop />} />
             </Row>
          </Infos>
       </AboutWrapper>
@@ -37,6 +36,7 @@ export default function About() {
 }
 
 const AboutWrapper = styled.section`
+   direction: ${({ direct }) => (direct === "fa" ? "rtl" : "ltr")};
    margin-top: 5rem;
    padding: 0 3rem;
 `;
