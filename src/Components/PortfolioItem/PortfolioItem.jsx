@@ -1,9 +1,12 @@
 import React from "react";
 import { Col } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import colors from "../../Styles/Varibles";
 
 export default function PortfolioItem({ source, explain, goTo }) {
+   const { t } = useTranslation();
+
    return (
       <PortfolioItemWrapper sm={4}>
          <Item href={goTo}>
@@ -11,7 +14,7 @@ export default function PortfolioItem({ source, explain, goTo }) {
 
             <Describtion>
                <Text>{explain}</Text>
-               <Button>View</Button>
+               <Button>{t("view")}</Button>
             </Describtion>
          </Item>
       </PortfolioItemWrapper>

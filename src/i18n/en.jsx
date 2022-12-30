@@ -9,7 +9,8 @@ const en = {
    linkContact: "Contact",
 
    aboutHeader: "About",
-   aboutDescribtion: `  Its been a year since i stepped in the frontend developing filed. Since then, I have gained a relative mastery over this field . I've got a deep knowledge in
+   aboutDescribtion: `  Its been a year since i stepped in the frontend developing filed. Since then, I have gained a relative mastery over this field .
+    I've got a deep knowledge in
    js and became a master at it's popular framwork, react . I have an extreme passion about technology and developing that makes me go after the newest thing or
    even the hardest things in this filed . In the bellow of this page you can see some of my personal informations to know me better .`,
    aboutUnderPosition: "If you needed any more information , please be in touch with me.",
@@ -31,6 +32,27 @@ const en = {
    resume: "Resume",
    mainSkills: "Main skills",
    otherSkills: "Other skills",
+
+   portfolio: "Portfolio",
+   view: "View",
+   portfolioAlert: "For visiting these sites use VPN and this info :",
+   instagramDescribtion: `this is an instagram like site that has all those options like instagram itself .
+   This site uses technologies such as html, css , react , react-bootstrap , axios , swiper js , jwt ,others . 
+   this site also has a private backend with django python.  `,
+   musicDescribtion: `this is a music-player site like spotify.
+   This site uses technologies such as html, css , react , react-bootstrap , axios , swiper js , jwt ,others . 
+   this site also has a private backend with django python.  `,
+   furnitureDescribtion: `this is a furinture shop site .
+   This site uses technologies such as html, css , react , react-bootstrap , axios , swiper js , jwt ,others . 
+   this site also has a private backend with django python.  `,
+   personalDescribtion: `this is a personal landing page for resume site .
+   This site uses technologies such as html, css , vanila js ,bootstrap , swiper js ,others . 
+   this site also has two theme mode as dark and light .  `,
+   campingDescribtion: `this is an only one page of a camping site .
+   This site uses technologies such as html, css , vanila js ,bootstrap , swiper js ,others . 
+   this site is just a prototype for template`,
+
+   contact: "Contact",
 };
 
 export default en;
