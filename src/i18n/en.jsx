@@ -53,6 +53,13 @@ const en = {
    this site is just a prototype for template`,
 
    contact: "Contact",
+   contactText: "There is some ways that you can be in touch with me :",
+   telegram: "Telegram",
+   whatsapp: "Whatsapp",
+   instagram: "Instagram",
+   github: "Github",
+   gmail: "Gmail",
+   phoneCall: "PhoneCall",
 };
 
 export default en;

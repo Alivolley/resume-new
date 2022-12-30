@@ -3,18 +3,19 @@ import { Col } from "react-bootstrap";
 import styled from "styled-components";
 import colors from "../../Styles/Varibles";
 
-export default function ContactItme({ firstIcon, social, title, goTo }) {
+export default function ContactItme({ firstIcon, social, title, goTo, colorKey }) {
+   console.log(colorKey);
    return (
       <Col lg={6}>
          {social.includes("PhoneCall") ? (
             <Div>
-               <Icon color={social}>{firstIcon}</Icon>
+               <Icon color={colorKey}>{firstIcon}</Icon>
                <Label>{social}</Label>
                <Response>{title}</Response>
             </Div>
          ) : (
             <ContactItmeWrapper href={goTo}>
-               <Icon color={social}>{firstIcon}</Icon>
+               <Icon color={colorKey}>{firstIcon}</Icon>
                <Label>{social}</Label>
                <Response>{title}</Response>
             </ContactItmeWrapper>
@@ -47,17 +48,17 @@ const Icon = styled.div`
    }
 
    color: ${({ color }) =>
-      color.includes("Telegram")
+      color === "telegram"
          ? colors.hover
-         : color.includes("Whatsapp")
+         : color === "whatsapp"
          ? "green"
-         : color.includes("Instagram")
+         : color === "instagram"
          ? "purple"
-         : color.includes("Github")
+         : color === "github"
          ? colors.primary
-         : color.includes("Gmail")
+         : color === "gmail"
          ? "#E34133"
-         : color.includes("PhoneCall")
+         : color === "phoneCall"
          ? "#0145A8"
          : "black"};
 `;

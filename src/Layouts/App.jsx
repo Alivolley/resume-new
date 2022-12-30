@@ -7,11 +7,13 @@ import { Row, Col } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { CgCloseR } from "react-icons/cg";
+import { useTranslation } from "react-i18next";
 
 function App() {
    const router = useRoutes(routes);
    const [showSideBar, setShowSideBar] = useState(false);
    const location = useLocation();
+   const { i18n } = useTranslation();
 
    useEffect(() => {
       setShowSideBar(false);
@@ -29,7 +31,9 @@ function App() {
             </Col>
          </Row>
 
-         <ToggleButton onClick={() => setShowSideBar((prev) => !prev)}>{showSideBar ? <CgCloseR /> : <AiOutlineMenu />}</ToggleButton>
+         <ToggleButton onClick={() => setShowSideBar((prev) => !prev)} direct={i18n.language}>
+            {showSideBar ? <CgCloseR /> : <AiOutlineMenu />}
+         </ToggleButton>
       </AppWrapper>
    );
 }
@@ -67,7 +71,7 @@ const ToggleButton = styled.div`
    justify-content: center;
    align-items: center;
    position: fixed;
-   right: 1.5rem;
+   ${({ direct }) => (direct === "fa" ? "left: 1.5rem;" : "right: 1.5rem;")}
    top: 1.5rem;
    cursor: pointer;
    z-index: 3;

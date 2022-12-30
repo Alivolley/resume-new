@@ -23,7 +23,6 @@ export default function SideBarLinks() {
          location.pathname === "/" && navigate("/about");
       }
    };
-   console.log(location);
 
    return (
       <SideBarLinksWrapper direct={i18n.language}>
