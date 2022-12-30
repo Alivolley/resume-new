@@ -13,37 +13,37 @@ export default function SideBarLinks() {
 
    const changeLanguge = () => {
       if (i18n.language === "en") {
-         i18n.changeLanguage("fa");
+         navigation(0);
          localStorage.setItem("lang", "fa");
-         navigation(0);
+         i18n.changeLanguage("fa");
       } else {
-         i18n.changeLanguage("en");
-         localStorage.setItem("lang", "en");
          navigation(0);
+         localStorage.setItem("lang", "en");
+         i18n.changeLanguage("en");
       }
    };
 
    return (
-      <SideBarLinksWrapper>
+      <SideBarLinksWrapper direct={i18n.language}>
          <LinkItem to="/">
             <AiOutlineHome />
-            <p>Home</p>
+            <p>{t("linkHome")}</p>
          </LinkItem>
          <LinkItem to="/about">
             <AiOutlineUser />
-            <p>About</p>
+            <p>{t("linkAbout")}</p>
          </LinkItem>
          <LinkItem to="/resume">
             <BsFillFileEarmarkPostFill />
-            <p>Resume</p>
+            <p>{t("linkResume")}</p>
          </LinkItem>
          <LinkItem to="/portfolio">
             <BsCollection />
-            <p>Portfolio</p>
+            <p>{t("linkPortfolio")}</p>
          </LinkItem>
          <LinkItem to="/contact">
             <MdContactPhone />
-            <p>Contact</p>
+            <p>{t("linkContact")}</p>
          </LinkItem>
          <ChangeLanguge onClick={changeLanguge}>
             <MdLanguage />
@@ -54,6 +54,7 @@ export default function SideBarLinks() {
 }
 
 const SideBarLinksWrapper = styled.div`
+   direction: ${({ direct }) => (direct === "fa" ? "rtl" : "ltr")};
    display: flex;
    flex-direction: column;
    gap: 3rem;

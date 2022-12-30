@@ -6,12 +6,15 @@ import { GrInstagram } from "react-icons/gr";
 import { SiGmail } from "react-icons/si";
 import { BsGithub, BsWhatsapp, BsTelegram } from "react-icons/bs";
 import SideBarLinks from "../SideBarLinks/SideBarLinks";
+import { useTranslation } from "react-i18next";
 
 export default function Sidebar() {
+   const { t, i18n } = useTranslation();
+
    return (
       <SideBarWrapper>
          <Image src={first} alt="Ali Azghandi" />
-         <Title>Ali Azghandi</Title>
+         <Title>{t("name")}</Title>
 
          <SocialMediaIcons>
             <SocialMediaLinksIcon href="https://t.me/Alivolley">
