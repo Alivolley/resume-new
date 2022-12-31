@@ -28,7 +28,7 @@ export default function Portfolio() {
 
          <Row>
             <PortfolioItem source={insta} explain={t("instagramDescribtion")} goTo={"https://instagram-project-kohl.vercel.app/"} />
-            <PortfolioItem source={music} explain={t("musicDescribtion")} goTo={"https://music8.netlify.app/"} />
+            <PortfolioItem source={music} explain={t("musicDescribtion")} goTo={"https://music-sand-xi.vercel.app/"} />
             <PortfolioItem source={furniture} explain={t("furnitureDescribtion")} goTo={"https://forniture-opal.vercel.app/"} />
             <PortfolioItem source={portfo} explain={t("personalDescribtion")} goTo={"https://landing8.netlify.app/"} />
             <PortfolioItem source={camp} explain={t("campingDescribtion")} goTo={"https://camping8.netlify.app/"} />
