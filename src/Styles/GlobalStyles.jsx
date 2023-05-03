@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import Fonts from "./Fonts";
+import { createGlobalStyle } from 'styled-components';
+import Fonts from './Fonts';
 
 export const GlobalStyle = createGlobalStyle`
    ${Fonts}
@@ -30,6 +30,11 @@ export const GlobalStyle = createGlobalStyle`
    }
 
    @media (max-width: 576px) {
+
+    * {
+        cursor: default !important;
+    }
+
       .row{
          margin-top: 0; 
          margin-right: 0; 
