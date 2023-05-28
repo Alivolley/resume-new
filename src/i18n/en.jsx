@@ -22,12 +22,12 @@ const en = {
    City: 'City',
    Exprience: 'Exprience',
 
-   23: '23',
+   24: '24',
    Single: 'Single',
    Done: 'Done',
    Remote: 'Remote',
    Kermanshah: 'Kermanshah',
-   Year: '1 Year',
+   Year: '2 Year',
 
    resume: 'Resume',
    mainSkills: 'Main skills',

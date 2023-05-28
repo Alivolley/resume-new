@@ -24,12 +24,12 @@ const fa = {
    City: 'استان سکونت',
    Exprience: 'تجربه',
 
-   23: '۲۳',
+   24: '۲۴',
    Single: 'مجرد',
    Done: 'پایان خدمت',
    Remote: 'دورکاری',
    Kermanshah: 'کرمانشاه',
-   Year: '۱ سال',
+   Year: '۲ سال',
 
    resume: 'رزومه',
    mainSkills: 'مهارت های اصلی',
