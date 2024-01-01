@@ -1,13 +1,12 @@
-import React from "react";
-import { Col } from "react-bootstrap";
-import styled from "styled-components";
-import colors from "../../Styles/Varibles";
+import React from 'react';
+import { Col } from 'react-bootstrap';
+import styled from 'styled-components';
+import colors from '../../Styles/Varibles';
 
 export default function ContactItme({ firstIcon, social, title, goTo, colorKey }) {
-   console.log(colorKey);
    return (
       <Col lg={6}>
-         {social.includes("PhoneCall") ? (
+         {social.includes('PhoneCall') ? (
             <Div>
                <Icon color={colorKey}>{firstIcon}</Icon>
                <Label>{social}</Label>
@@ -24,7 +23,7 @@ export default function ContactItme({ firstIcon, social, title, goTo, colorKey }
    );
 }
 
-const ContactItmeWrapper = styled.a.attrs({ target: "_blank" })`
+const ContactItmeWrapper = styled.a.attrs({ target: '_blank' })`
    display: flex;
    align-items: center;
    gap: 1rem;
@@ -48,19 +47,19 @@ const Icon = styled.div`
    }
 
    color: ${({ color }) =>
-      color === "telegram"
+      color === 'telegram'
          ? colors.hover
-         : color === "whatsapp"
-         ? "green"
-         : color === "instagram"
-         ? "purple"
-         : color === "github"
+         : color === 'whatsapp'
+         ? 'green'
+         : color === 'instagram'
+         ? 'purple'
+         : color === 'github'
          ? colors.primary
-         : color === "gmail"
-         ? "#E34133"
-         : color === "phoneCall"
-         ? "#0145A8"
-         : "black"};
+         : color === 'gmail'
+         ? '#E34133'
+         : color === 'phoneCall'
+         ? '#0145A8'
+         : 'black'};
 `;
 
 const Label = styled.label`

@@ -15,12 +15,12 @@ export default function Resume() {
          <SectionTitle>{t('resume')}</SectionTitle>
          <Title>{t('mainSkills')}</Title>
          <Row>
-            <ResumeItem skill={'Html'} percent={'95'} prog={'95'} />
-            <ResumeItem skill={'Css'} percent={'95'} prog={'95'} />
-            <ResumeItem skill={'Javascript'} percent={'90'} prog={'90'} />
-            <ResumeItem skill={'Es6 , Es7 , Es8...'} percent={'90'} prog={'90'} />
-            <ResumeItem skill={'React'} percent={'90'} prog={'90'} />
-            <ResumeItem skill={'Redux'} percent={'95'} prog={'95'} />
+            <ResumeItem skill={'Html'} percent={'100'} prog={'100'} />
+            <ResumeItem skill={'Css'} percent={'100'} prog={'100'} />
+            <ResumeItem skill={'Javascript'} percent={'100'} prog={'100'} />
+            <ResumeItem skill={'Es6 , Es7 , Es8...'} percent={'100'} prog={'100'} />
+            <ResumeItem skill={'React'} percent={'100'} prog={'100'} />
+            <ResumeItem skill={'NextJs'} percent={'100'} prog={'100'} />
          </Row>
 
          <Title>{t('otherSkills')}</Title>
@@ -28,7 +28,7 @@ export default function Resume() {
          <List>
             <Row>
                <Item sm={6}>
-                  <Icon /> Stlyed components , Axios , Formik , Yup ...
+                  <Icon /> Styled components , Css-modules
                </Item>
                <Item sm={6}>
                   <Icon /> Bootstrap , React-bootstrap , Material UI , Tailwind
@@ -37,13 +37,13 @@ export default function Resume() {
                   <Icon /> Npm , Yarn , Git , Github , Regex
                </Item>
                <Item sm={6}>
-                  <Icon /> Websocket , Socket.Io
+                  <Icon /> Formik , Yup , React-hook-form
+               </Item>
+               <Item sm={6}>
+                  <Icon /> Websocket , Socket.Io , React-query , SWR
                </Item>
                <Item sm={6}>
                   <Icon /> EsLint , Prettier , SEO
-               </Item>
-               <Item sm={6}>
-                  <Icon /> Above average english
                </Item>
             </Row>
          </List>
